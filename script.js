@@ -17,6 +17,7 @@ function onLoad() {
   addAllClasses();
   removeOdd();
   createList2();
+  disableBtn5();
 }
 
 // Agrega las clases element-n.
@@ -62,6 +63,7 @@ function createList2() {
   let button5 = document.createElement("BUTTON");
   button5.classList.add("element-5");
   button5.innerHTML = "texto ejemplo 5";
+  button5.setAttribute("id", "btn5_Disable");
 
   //Creamos li.
   let li1 = document.createElement("LI");
@@ -77,4 +79,8 @@ function createList2() {
 
   li5.appendChild(button5);
   list2.appendChild(li5);
+}
+
+function disableBtn5() {
+  var x = (document.getElementById("btn5_Disable").disabled = true);
 }
